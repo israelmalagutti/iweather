@@ -1,5 +1,7 @@
 import { getNextDays } from "./getNextDays";
 
 it("should return the next five days", () => {
-  console.log("This is a test!");
+  const days = getNextDays();
+
+  expect(days.length).toBe(5);
 });
