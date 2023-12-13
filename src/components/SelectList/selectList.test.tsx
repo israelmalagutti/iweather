@@ -17,10 +17,11 @@ describe("Component: SelectList", () => {
 
     render(<SelectList data={data} onChange={onChange} onPress={onPress} />);
 
-    const selectedCity = screen.getByText(/campo/i);
+    const getCity = /campo/i;
+    const selectedCity = screen.getByText(getCity);
 
     fireEvent.press(selectedCity);
 
-    expect(onPress).toBeCalledTimes(0);
+    expect(onPress).toHaveBeenCalledWith(data[1]);
   });
 });
