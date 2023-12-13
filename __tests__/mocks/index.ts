@@ -1,2 +1,1 @@
-export * from "./mockCityAPIResponse";
-export * from "./mockWeatherAPIResponse";
+export * from "./async-storage";

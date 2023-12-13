@@ -2,7 +2,7 @@ import { api } from "./api";
 
 import { getWeatherByCityService } from "./getWeatherByCityService";
 
-import { mockWeatherAPIResponse } from "@mocks/index";
+import { mockWeatherAPIResponse } from "@mocks/api";
 
 describe("Service: getWeatherByCityService", () => {
   it("should return weather formatted details", async () => {
