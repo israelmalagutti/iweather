@@ -4,7 +4,7 @@ import { getCityByNameService } from "./getCityByNameService";
 
 import { mockCityAPIResponse } from "@mocks/index";
 
-describe("API: getCityByNameService", () => {
+describe("Service: getCityByNameService", () => {
   it("should return the city details", async () => {
     jest.spyOn(api, "get").mockResolvedValue({
       data: mockCityAPIResponse,
