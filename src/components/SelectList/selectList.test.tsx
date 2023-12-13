@@ -5,6 +5,16 @@ import { CityProps } from "@services/getCityByNameService";
 import { SelectList } from "./";
 
 describe("Component: SelectList", () => {
+  it("should not show options when data is empty", () => {
+    const data: CityProps[] = [];
+
+    render(<SelectList data={data} onChange={() => {}} onPress={() => {}} />);
+
+    const options = screen.getByTestId("options");
+
+    expect(options.children).toHaveLength(0);
+  });
+
   it("should return the selected city details", () => {
     const data: CityProps[] = [
       { id: "1", name: "Campinas", latitude: 123, longitude: 321 },
